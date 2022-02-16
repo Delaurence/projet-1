@@ -47,42 +47,45 @@ nav ul li:hover {
 }
 
 .page-content header {
-       margin: top 5%;
+       margin-top: 5%;
        max-width: 80%;
 }
 
 .page-content header h1 {
-    margin-top:0;
+    margin:0;
     text-transform: uppercase;
-    font-family: 'Oswald' sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 6vw;
 }
 
 .page-content header p {
     line-height: 30px;
-    color: darkseagreen;
+    color: #818181;
+}
+.page-content header button {
+    background-color: inherit;
+    cursor: pointer;
+    
 }
 
-.page-content .presentation-image{
+ .presentation-image{
     margin-top: 5%;
 }
-
-.page-content .presentation-image img{
+.presentation-image img{
     max-width: 100%;
-	height: auto;
+    height: auto;
 }
-
-.page-content .projects{
+.page-content .projets{
     margin-top:  6%;
 }
 
-.page-content .projects h1{
+.page-content .projets h1{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 3vw;
 }
 
-.projets  .projets-section .projet  {
+.projets  .projets-section  {
       display: flex;
       flex-wrap: wrap;
 }
@@ -91,21 +94,19 @@ nav ul li:hover {
 
     color: green;
 }
-
-.page-content .projects .projects-section .project {
-    margin-right: 20px;
+.projets .projets-section .projet {
+    margin-right: 60px;
     max-width: 195px;
 }
-
-.page-content .projects .projects-section .project h4{
+.projets .projets-section .projet h4{
     margin: 0;
 }
 
-.page-content .projects .projects-section .project .description{
-    font-size: 10px;
+.projets .projets-section .projet .description{
+    font-size: 12px;
 }
 
-.page-content .projects .projects-section .project .dates{
+.projets .projets-section .projet .dates{
        font-size: 13px;
        color: rgb(145, 145, 145);
 }
@@ -117,7 +118,7 @@ footer {
     justify-content: space-around;
     background-color: #000;
     color: white;
-    padding:40px;
+    padding:10px;
 }
 
 footer .colonne p {
@@ -128,4 +129,41 @@ footer .colonne p {
 
 footer .colonne p:hover {
 	color: #fff;
+}
+
+/*le code pour le format telephone ou tablette*/
+
+@media screen and (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		display: none;
+	}
+
+	.page-content header {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+	.page-content .projects-section {
+		margin-top: 15%;
+	}
+	.page-content .projects-section h1 {
+		font-size: 1.5em;
+	}
+	.page-content .projects-section .project {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.page-content .projects-section .project .description {
+		font-size: 13px;
+	}
+
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
 }
